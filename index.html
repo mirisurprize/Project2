@@ -7,6 +7,36 @@
     <title>Document</title>
 </head>
 <body>
-    
+<button id="norsk">norsk</button>
+<button id="english">english</button>
+<button id="italiano">italiano</button>
+<h1 id="title">Press a button</h1>
+
+    <script type="module">
+        import {translate} from "./module.js";
+
+        let norsk = document.getElementById("norsk");
+        let english = document.getElementById("english");
+        let italiano = document.getElementById("italiano");
+        let title = document.getElementById("title");
+
+        norsk.addEventListener("click", function(evt,language){
+            //chosenL = "no";
+            title.innerHTML = translate[language].mainTitle;
+        });
+
+        english.addEventListener("click", function(evt){
+            chosenL = "en";
+            title.innerHTML = button[language].btn;
+        });
+
+        italiano.addEventListener("click", function(evt){
+            chosenL = "ita";
+            title.innerHTML = button[language].btn;
+        });
+
+
+        
+    </script>
 </body>
 </html>
